@@ -8,10 +8,10 @@ console.log(data);
 ---
 
 <Layout>
-  <h2>Produktliste</h2>
-  {data.map((element) => <ProductCard data={element} />)}
+  <main>
+    <h2>Produktliste</h2>
+    <div class="productlist">
+      {data.map((element) => <ProductCard data={element} />)}
+    </div>
+  </main>
 </Layout>
-
-<style></style>
-
-<script></script>

@@ -2,7 +2,17 @@
 const { data } = Astro.props;
 ---
 
-<article>
-  <h2>{data.productdisplayname}</h2>
-  <p>{data.price} kr.</p>
+<article class="smallProduct">
+  <img
+    src=`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`
+    alt="product image"
+  />
+  <h3>{data.productdisplayname}</h3>
+  <p class="subtle">{data.articletype} | {data.brandname}</p>
+  <p class="price">DKK <span>{data.price}</span>,-</p>
+  <div class="discounted">
+    <p>Now DKK <span></span>,-</p>
+    <p><span></span>%</p>
+  </div>
+  <a href="product.html">Read More</a>
 </article>
